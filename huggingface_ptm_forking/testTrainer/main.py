@@ -1,5 +1,6 @@
 import evaluate
 import numpy as np
+import torch
 from datasets import load_dataset
 from datasets.dataset_dict import DatasetDict
 from evaluate import EvaluationModule
@@ -8,6 +9,8 @@ from transformers import (AutoModelForSequenceClassification, AutoTokenizer,
 from transformers.models.bert.modeling_bert import \
     BertForSequenceClassification
 from transformers.models.bert.tokenization_bert_fast import BertTokenizerFast
+
+torch.cuda.empty_cache()
 
 
 def tokenize_function(examples):
