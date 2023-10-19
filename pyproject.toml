@@ -11,6 +11,8 @@ torch = {version = "^2.1.0+cu118", source = "pytorch_cuda11.8"}
 torchvision = {version = "^0.16.0+cu118", source = "pytorch_cuda11.8"}
 torchaudio = {version = "^2.1.0+cu118", source = "pytorch_cuda11.8"}
 transformers = {version = "^4.34.1", extras = ["torch"]}
+datasets = "^2.14.5"
+evaluate = "^0.4.1"
 
 
 [tool.poetry.group.dev.dependencies]
