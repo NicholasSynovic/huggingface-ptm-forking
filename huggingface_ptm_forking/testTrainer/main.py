@@ -26,7 +26,11 @@ def compute_metrics(eval_pred):
 training_args: TrainingArguments = TrainingArguments(
     output_dir="test_trainer",
     evaluation_strategy="epoch",
+    num_train_epochs=1,
+    max_steps=1,
+    hub_model_id="NicholasSynovic/forking-test",
 )
+
 metric: EvaluationModule = evaluate.load("accuracy")
 
 ds: DatasetDict = load_dataset("yelp_review_full")
@@ -56,4 +60,6 @@ trainer: Trainer = Trainer(
     compute_metrics=compute_metrics,
 )
 
+trainer.init_hf_repo()
 trainer.train()
+trainer.save_model("test_model")
