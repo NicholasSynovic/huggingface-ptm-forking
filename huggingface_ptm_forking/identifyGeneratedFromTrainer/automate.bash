@@ -29,7 +29,7 @@ fi
 #construct complete URL
 url="https://huggingface.co/$author/$modelName/raw/main/README.md"
 
-folder="/Users/karolinaryzka/Documents/Samples/identifyGeneratedFromTrainer/readMeFiles"
+folder="/huggingface-ptm-forking/huggingface-ptm-forking/huggingface_ptm_forking/identifyGeneratedFromTrainer/readMeFilesStorage"
 
 echo "Constructed URL: $url"
 
